@@ -51,7 +51,7 @@ while True:
         cv2.circle(frame, (x2, y2), 3, (255, 0, 255), -1)
 
         # If blink detected and cooldown passed, click
-        if blink_distance < 0.004:
+        if blink_distance < 0.002:
             current_time = time.time()
             if current_time - last_click_time > click_cooldown:
                 pyautogui.click()
